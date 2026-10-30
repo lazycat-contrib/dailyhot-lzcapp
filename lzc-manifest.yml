@@ -1,0 +1,24 @@
+application:
+  subdomain: dailyhot
+  multi_instance: false
+  upstreams:
+    - location: /api/
+      backend: http://dailyhot-api:6688/
+    - location: /
+      backend: file:///lzcapp/pkg/content/dist/
+services:
+  dailyhot-api:
+    # upstream: ghcr.io/imsyy/dailyhotapi:v2.0.8
+    image: docker.1ms.run/imsyy/dailyhotapi:v2.0.8
+    environment:
+      - TZ=Asia/Shanghai
+      - ALLOWED_DOMAIN=*
+      - ALLOWED_HOST=
+      - USE_LOG_FILE=false
+    binds:
+      - /lzcapp/var/logs:/logs
+usage: |
+  今日热榜：聚合 40+ 中文平台热门数据。打开即是网页看板；自托管 API 挂在 /api/ 下（如 /api/bilibili），也支持 RSS（加 ?rss=true）。
+  数据由 API 定时缓存，默认 1 小时刷新；各平台数据可用性取决于对应网站的接口状态。
+  首页数据目录、关于页面等说明见网页内导航。入口保留懒猫登录保护；无公开路径、无文件选择器拦截。
+  未验证实机部署后各榜单接口的可用性。

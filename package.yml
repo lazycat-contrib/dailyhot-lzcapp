@@ -1,0 +1,18 @@
+package: community.lazycat.app.dailyhot
+version: 1.2.0
+name: DailyHot
+description: Aggregated trending-topic dashboard covering 40+ Chinese platforms, with self-hosted API and web UI.
+min_os_version: "1.5.0"
+homepage: https://github.com/imsyy/DailyHotApi
+author: imsyy
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: DailyHot
+    description: 今日热榜，聚合 40+ 中文平台热门数据的看板，内置自托管 API 与网页界面。
+  en:
+    name: DailyHot
+    description: Aggregated trending-topic dashboard covering 40+ Chinese platforms, with self-hosted API and web UI.
