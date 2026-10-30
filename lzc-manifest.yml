@@ -9,7 +9,7 @@ application:
 services:
   dailyhot-api:
     # upstream: ghcr.io/imsyy/dailyhotapi:v2.0.8
-    image: docker.1ms.run/imsyy/dailyhotapi:v2.0.8
+    image: ghcr.1ms.run/imsyy/dailyhotapi:v2.0.8
     environment:
       - TZ=Asia/Shanghai
       - ALLOWED_DOMAIN=*

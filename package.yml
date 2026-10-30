@@ -1,5 +1,5 @@
 package: community.lazycat.app.dailyhot
-version: 1.2.0
+version: 2.0.8
 name: DailyHot
 description: Aggregated trending-topic dashboard covering 40+ Chinese platforms, with self-hosted API and web UI.
 min_os_version: "1.5.0"
